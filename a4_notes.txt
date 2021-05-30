@@ -1,0 +1,8 @@
+-Do not minus camera center from ray direction. The ray direction is already wrt camera origin.
+-For depth image, it is maxDepth - hit.time. If you use hit.time - minDepth, bright would correspond to far.
+-For normal image, abs all x, y, z components to display correctly.
+-Be careful how you specify the screen point. what is i and what is j?
+-Background color is NOT a part of Phong shading.
+-Remember to multiply the normal vector when calculating reflected ray: r = v - 2*dot(v.n)*n  <--
+-You need to normalize all normals, even those computed by Barycentric interpolation. some specularity was wrong for bunny_1k
+-DO NOT normalize the transformed ray direction in Transform.
